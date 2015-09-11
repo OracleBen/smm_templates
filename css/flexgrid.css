@@ -89,37 +89,6 @@ span.label {
   font-weight: 500;
 }
 
-.red-tweet .thumbnail {
-  background: #5a1b3c;
-}
-
-.green-tweet .thumbnail {
-  background: #5a1b3c;
-}
-
-.first-post .thumbnail {
-    background: #FF6600;
-}
-.second-post .thumbnail {
-    background: #5aadad;
-}
-.third-post .thumbnail {
-    background: #4d9494;
-}
-.fourth-post .thumbnail {
-    background: #407a7a;
-}
-.fifth-post .thumbnail {
-    background: #326161;
-}
-.sixth-post .thumbnail {
-    background: #254747;
-}
-.seventh-post .thumbnail {
-    background: #182e2e;
-}	
-
-
 #leftColumn {
   background: url('https://cdn.vitrue.com/vitrue/oracle/mme/cx_background.png') repeat-y;
   height: 100%;
@@ -162,22 +131,17 @@ span.label {
 }
 
 #poweredBy {
-    background: transparent none repeat scroll 0 0;
-    position: fixed;
-    right: 40px;
-    top: 55px;
-    z-index: 1;
+	background: transparent none repeat scroll 0 0;
+	position: fixed;
+	right: 40px;
+	top: 55px;
+	z-index: 1;
 }
 
-
 #poweredBy img {
-    max-height: 30px;
+  max-height: 30px;
 }
 
 .hashtags span {
 	display: none;
-}
-
-.pagination {
-	display: none !important;
 }

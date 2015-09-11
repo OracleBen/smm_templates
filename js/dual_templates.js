@@ -27,6 +27,13 @@ $(function(){
 		}
 	}
 	
+	// SET TO OFF TO TURN PAGINATION OFF
+	pagination = 'on';
+	
+	if (pagination == 'off') {
+		$('.pagination').hide();
+	}
+	
 	template = GetURLParameter('template');
 	
 	// MULTICOLOR ON/OFF (ONLY FOR TWITTER WATERFALL)
