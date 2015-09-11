@@ -1,10 +1,17 @@
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-// SET THE CAMPAIGN TO HAVE 6 POSTS PER PAGE
+//
+// CHANGE THE FILE NAME TO REFLECT THE USE OF THIS FILE
+//
 // SET THE CAMPAIAGN TO USE THE WATERFALL LAYOUT
 // PLACE THIS FILE AND COORESPONDING CSS FILE ON THE CDN
 // REFERENCE THIS FILE IN THE JQUERY URL PATH IN YOUR MODULE CONFIG
 // MAKE SURE YOU'RE PULLING TWITTER CONTENT
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+// PLACE ANY CODE IN HERE THAT NEEDS TO BE TRIGGERED WHEN THE PAGE LOADS
+$(document).ready(function() {
+	
+});
 
 $(function(){
 	
@@ -22,12 +29,10 @@ $(function(){
 	
 	template = GetURLParameter('template');
 	
-	// MULTICOLOR ON/OFF
+	// MULTICOLOR ON/OFF (ONLY FOR TWITTER WATERFALL)
 	multicolor = 'yes';
 	
-	//Add roboto font reference
-	$('head').append('<link href="//fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet" type="text/css">');
-	
+	// CHANGE URL TO POINT TO THE PROPER LOCATION OF THE CSS FILE
 	if (template == 'flex_grid'){
 		$('head').append('<link rel="stylesheet" href="https://cdn.vitrue.com/vitrue/oracle/smm/clients/dmexco/cx_flex.css" type="text/css" />');
 	} else {
@@ -37,11 +42,11 @@ $(function(){
 	//Set body background
 	$('html').height('100%');
 	
-	var hashTags = '<span style="display: inline;">#dmexco</span>';
-	 		// hashTags += '<span>#HASHTAG</span>';
-	 		// hashTags += '<span>#HASHTAG2</span>';
-	 		// hashTags += '<span>#HASHTAG3</span>';
-	 		// hashTags += '<span>#HASHTAG4</span>';
+	var hashTags = '<span style="display: inline;">#HASHTAG0</span>';
+	 		hashTags += '<span>#HASHTAG1</span>';
+	 		hashTags += '<span>#HASHTAG2</span>';
+	 		hashTags += '<span>#HASHTAG3</span>';
+	 		hashTags += '<span>#HASHTAG4</span>';
 
 	var leftColumn = '<div id="leftColumn"></div>'
 	
@@ -53,11 +58,10 @@ $(function(){
 	var poweredBy = '<div id="poweredBy"><img src="https://cdn.vitrue.com/vitrue/oracle/mme/powered_by.png" class="pull-right"></div>';
 
 	if (template == 'flex_grid'){
-	$('.social-wall').prepend('<div id="background">'+backgroundContent+poweredBy+'</div>');
+		$('.social-wall').prepend('<div id="background">'+backgroundContent+poweredBy+'</div>');
 	} else {
 		$('.social-wall').before('<div id="background">'+leftColumn+backgroundContent+poweredBy+'</div>');
 	}
-
 		
 	//Update layout for facebook tab display
 	if($(window).width() <= 810){
@@ -77,13 +81,7 @@ $(function(){
 		$('.social-wall').css('height','620px');
 	}
 	
-	if (multicolor == 'no'){
-		$('.post:nth-child(4n+1)').addClass('blue-tweet');
-		$('.post:nth-child(4n+2)').addClass('red-tweet');
-		$('.post:nth-child(4n+3)').addClass('green-tweet');
-	}	else if (multicolor == 'yes'){
-		$('.post:even()').addClass('even-post');
-		$('.post:odd()').addClass('odd-post');
+	if (multicolor == 'yes'){
 		$('.post:nth-child(1)').addClass('first-post');
 		$('.post:nth-child(2)').addClass('second-post');
 		$('.post:nth-child(3)').addClass('third-post');
@@ -92,11 +90,8 @@ $(function(){
 		$('.post:nth-child(6)').addClass('sixth-post');
 		$('.post:nth-child(7)').addClass('seventh-post');
 	} else {
-		$('.post:nth-child(4n+1)').addClass('blue-tweet');
-		$('.post:nth-child(4n+2)').addClass('red-tweet');
-		$('.post:nth-child(4n+3)').addClass('green-tweet');		
+		// DO NOTHING
 	}
-	
 	
 	//Wrap hashtags
 	$('.thumbnail .post-message').each(function(){
@@ -115,29 +110,19 @@ $(function(){
 	//Listen for creation of new posts
 	$('#post-container').arrive('.post', function(){
 	  var $newElem = $(this);
-		$newElem.addClass('odd-post');
 		//Add proper styling class to new post
-		if (multicolor == 'no'){		
-			if($('.post:eq(1)').hasClass('blue-tweet')) $newElem.addClass('green-tweet');
-			if($('.post:eq(1)').hasClass('red-tweet')) $newElem.addClass('blue-tweet');
-			if($('.post:eq(1)').hasClass('green-tweet')) $newElem.addClass('red-tweet');
-		}	else if (multicolor == 'yes'){
-			$('.post:even()').addClass('even-post');
-			$('.post:odd()').addClass('odd-post');
-			if($('.post:even()').hasClass('even-post')) $newElem.addClass('odd-post');
-			if($('.post:odd()').hasClass('odd-post')) $newElem.addClass('even-post');			
+		if (multicolor == 'yes'){		
 			if($('.post:eq(1)').hasClass('first-post')) $newElem.addClass('second-post');
 			if($('.post:eq(2)').hasClass('second-post')) $newElem.addClass('third-post');
 			if($('.post:eq(3)').hasClass('third-post')) $newElem.addClass('fourth-post');
 			if($('.post:eq(4)').hasClass('fourth-post')) $newElem.addClass('fifth-post');
 			if($('.post:eq(5)').hasClass('fifth-post')) $newElem.addClass('sixth-post');
 			if($('.post:eq(6)').hasClass('sixth-post')) $newElem.addClass('seventh-post');
-			if($('.post:eq(7)').hasClass('seventh-post')) $newElem.addClass('first-post');			
+			if($('.post:eq(7)').hasClass('seventh-post')) $newElem.addClass('first-post');
 		} else {
-			if($('.post:eq(1)').hasClass('blue-tweet')) $newElem.addClass('green-tweet');
-			if($('.post:eq(1)').hasClass('red-tweet')) $newElem.addClass('blue-tweet');
-			if($('.post:eq(1)').hasClass('green-tweet')) $newElem.addClass('red-tweet');
+			// DO NOTHING
 		}
+		
 		//Wrap hashtags within post text
 		$newElem.html($newElem.html().replace(/(\#[-\w]+)/g,'<span class="hashtag">$1</span>'));
 		// Add @ symbol for usernames
@@ -146,29 +131,30 @@ $(function(){
 	});
 	
   var allBoxes = $("div.hashtags").children("span");
-	
-  // transitionBox(null, allBoxes.first());
+
+	// THIS WILL FADE BETWEEN MULTIPLE HASHTAGS
+  transitionBox(null, allBoxes.first());
 
 	function transitionBox(from, to) {
-	    function next() {
-	        var nextTo;
-	        if (to.is(":last-child")) {
-	            nextTo = to.closest(".hashtags").children("span").first();
-	        } else {
-	            nextTo = to.next();
-	        }
-	        to.fadeIn(500, function () {
-	            setTimeout(function () {
-	                transitionBox(to, nextTo);
-	            }, 10000);
-	        });
-	    }
-    
-	    if (from) {
-	        from.fadeOut(500, next);
+	  function next() {
+	    var nextTo;
+	    if (to.is(":last-child")) {
+	      nextTo = to.closest(".hashtags").children("span").first();
 	    } else {
-	        next();
+	      nextTo = to.next();
 	    }
+	    to.fadeIn(500, function () {
+	      setTimeout(function () {
+	        transitionBox(to, nextTo);
+        }, 10000);
+	    });
+	  }
+
+	  if (from) {
+	    from.fadeOut(500, next);
+	  } else {
+	    next();
+	  }
 	}
 	
 });
