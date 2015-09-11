@@ -1,2 +1,1 @@
-# smm_templates
-Files used for SMM template modification.
+In this repo you'll find various JS and CSS files that are used for modifying the look, feel, and functionality of the SMM templates.
