@@ -1,0 +1,100 @@
+/* UPDATED 3.11.15 ~ BT */
+
+/* IF YOU NEED TO ADJUST THE HEIGHT OF THE HEADER THEN ADJUST THIS NUMBER ACCORDINGLY */
+.social-wall {
+	margin-top: 85px !important;
+	width: 100%;
+	overflow: hidden;
+}
+
+#tile-container {
+	text-align: left;
+	padding: 0 10px !important;
+	width: 101%;
+}
+
+.hashtags span {
+	display: none;
+}
+
+/* PRIMARY BACKGROUND COLOR FOR TILES */
+.post-message, .post-image {
+	background-color: #000000 !important;
+}
+
+/* SECONDARY BACKGROUND COLOR FOR TILES */
+.alternate-post .post-message, .alternate-post .post-image {
+	background-color: #000000 !important;
+}
+
+.post-modal .post-message {
+	background-color: #ffffff !important;	
+}
+
+.sa-header {
+  background: none repeat scroll 0 0 #ffffff;
+  font-size: 5em;
+  font-weight: 100;
+  height: 85px;
+  line-height: 1em;
+  padding: 0 20px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 2;
+}
+
+.sa-header .brand-logo {
+	float: left;
+	position: relative;	
+}
+
+.sa-header .hashtags {
+  color: #55acee;
+	font-size: 0.75em;
+	margin-left: 20px;
+	padding-top: 4px;
+	position: relative;
+	z-index: 999;
+}
+
+/* TO TURN PAGINATION BACK ON, UNCOMMENT ALL THESE LINES */
+.pagination {
+	display: none !important;
+}
+
+.pagination > li {
+	display: inline-block;
+	float: left;
+}
+
+/* CHANGE COLOR OF PAGINATION TEXT */
+.pagination a {
+	color: #545b5c;
+}
+
+.pagination span.current, .pagination span {
+	color: #95a5a6;
+}
+
+.pagination .active a {
+  background-color: #428bca
+}
+
+.pagination .active a {
+  border-color: #428bca
+}
+
+/* FIXES ISSUES WITH MODAL AND Z-INDEXES */
+.post-modal-wrapper {
+/*	position: fixed !important;*/
+}
+
+.social-indicator {
+	z-index: 1;
+}
+
+.post-modal-wrapper {
+	text-align: left;
+}
+

@@ -1,0 +1,155 @@
+body {
+	overflow: hidden;
+}
+
+.social-wall {
+  overflow: hidden;
+}
+
+#post-container {
+  width: 83%;
+  font-family: 'Roboto', sans-serif;
+  margin: 90px 0 0 150px;
+	height: 90%;
+	overflow: hidden;
+	position: absolute;
+}
+
+span.label {
+	display: none !important;
+}
+
+.post {
+	height: 14%;
+}
+
+.thumbnail {
+  border: 0;
+  border-radius: 2px;
+  color: #fff;
+  font-size: 30px;
+  font-weight: 300;
+  margin: 8px 0;
+  padding: 30px 30px 20px 100px;
+  position: relative;
+	height: 100%;
+}
+
+.thumbnail a {
+  color: #fff;
+}
+
+.thumbnail .media > img {
+  width: 65px;
+  height: 65px;
+  border-radius: 35px;
+  position: absolute;
+  left: 14px;
+  top: 14px;
+}
+
+.thumbnail .media-body h4 {
+  font-size: .75em;
+  font-weight: 500;
+  margin: 0 0 5px;
+}
+
+.thumbnail .media-body p {
+  margin: 0;
+}
+
+.thumbnail .hashtag {
+  font-weight: 500;
+}
+
+.red-tweet .thumbnail {
+  background: #5a1b3c;
+}
+
+.green-tweet .thumbnail {
+  background: #5a1b3c;
+}
+
+.first-post .thumbnail {
+    background: #67c7c7;
+}
+.second-post .thumbnail {
+    background: #5aadad;
+}
+.third-post .thumbnail {
+    background: #4d9494;
+}
+.fourth-post .thumbnail {
+    background: #407a7a;
+}
+.fifth-post .thumbnail {
+    background: #326161;
+}
+.sixth-post .thumbnail {
+    background: #254747;
+}
+.seventh-post .thumbnail {
+    background: #182e2e;
+}	
+
+#leftColumn {
+  background: url('https://cdn.vitrue.com/vitrue/oracle/mme/cx_background.png') repeat-y;
+  height: 100%;
+  width: 130px;
+  position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 10;
+}
+
+#background {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+}
+
+#contentAndTags {
+	font-size: 5em;
+	font-weight: 100;
+	margin-right: 20px;
+}
+
+#contentAndTags.narrow {
+	position: relative;
+	top: 5%;
+	left: 0%;
+}
+
+#contentAndTags .title {
+  margin-left: 150px;
+	margin-top: -10px;
+}
+
+#contentAndTags .hashtags {
+	color: #f80000;
+	font-size: 40px;
+	padding-right: 20px;
+	padding-top: 18px;
+}
+
+#poweredBy {
+	background: #ffffff;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+	width: 100%;
+  z-index: 1;
+	padding: 20px 30px 20px 20px;
+}
+
+#poweredBy img {
+	
+}
+
+.hashtags span {
+	display: none;
+}
+
+.post-image {
+    display: none !important;
+}

@@ -1,0 +1,183 @@
+body {
+	overflow: hidden;
+}
+
+.social-wall {
+  overflow: hidden;
+}
+
+#post-container {
+  width: 83%;
+  font-family: 'Roboto', sans-serif;
+  margin: 90px 0 0 150px;
+	height: 90%;
+	overflow: hidden;
+	position: absolute;
+}
+
+#flex-grid {
+	margin-top: 100px;
+/*	margin-left: 115px;*/
+/*	height: 90%;*/
+}
+
+#flex-grid .medium-square .post-message,
+#flex-grid .large-square .post-message {
+	padding: 15px;
+}
+
+#flex-grid .small-square .post-message {
+	padding: 10px;
+}
+
+span.label {
+	display: none !important;
+}
+
+.post {
+	background-color: #223233 !important;
+}
+
+.post.even-post {
+	background-color: red !important;	
+}
+
+.post.odd-post {
+	background-color: blue !important;	
+}
+
+.post-details.full .post-user {
+	background: url("https://socialaggregate.cpn.live.vitrue.com/images/dark-overlay.png") repeat scroll left top rgba(0, 0, 0, 0);
+}
+
+.thumbnail {
+  border: 0;
+  border-radius: 2px;
+  color: #fff;
+  font-size: 30px;
+  font-weight: 300;
+  margin: 8px 0;
+  padding: 30px 30px 20px 100px;
+  position: relative;
+	height: 100%;
+}
+
+.thumbnail a {
+  color: #fff;
+}
+
+.thumbnail .media > img {
+  width: 65px;
+  height: 65px;
+  border-radius: 35px;
+  position: absolute;
+  left: 14px;
+  top: 14px;
+}
+
+.thumbnail .media-body h4 {
+  font-size: .75em;
+  font-weight: 500;
+  margin: 0 0 5px;
+}
+
+.thumbnail .media-body p {
+  margin: 0;
+}
+
+.thumbnail .hashtag {
+  font-weight: 500;
+}
+
+.red-tweet .thumbnail {
+  background: #5a1b3c;
+}
+
+.green-tweet .thumbnail {
+  background: #5a1b3c;
+}
+
+.first-post .thumbnail {
+    background: #FF6600;
+}
+.second-post .thumbnail {
+    background: #5aadad;
+}
+.third-post .thumbnail {
+    background: #4d9494;
+}
+.fourth-post .thumbnail {
+    background: #407a7a;
+}
+.fifth-post .thumbnail {
+    background: #326161;
+}
+.sixth-post .thumbnail {
+    background: #254747;
+}
+.seventh-post .thumbnail {
+    background: #182e2e;
+}	
+
+
+#leftColumn {
+  background: url('https://cdn.vitrue.com/vitrue/oracle/mme/cx_background.png') repeat-y;
+  height: 100%;
+  width: 115px;
+  position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 10;
+}
+
+#background {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  /*background-color: #E5ECEB;*/
+  /*background: rgba(0, 0, 0, 0.15) url("http://dmexco.de/2015/img/connect-main.jpg") no-repeat scroll -25px 0;*/
+}
+
+#contentAndTags {
+	font-size: 5em;
+	font-weight: 100;
+	margin-right: 20px;
+}
+
+#contentAndTags.narrow {
+	position: relative;
+	top: 5%;
+	left: 0%;
+}
+
+#contentAndTags .title {
+	padding-left: 20px;
+	margin-top: -10px;
+}
+
+#contentAndTags .hashtags {
+	color: #f80000;
+	font-size: 40px;
+	padding-right: 20px;
+}
+
+#poweredBy {
+    background: transparent none repeat scroll 0 0;
+    position: fixed;
+    right: 40px;
+    top: 55px;
+    z-index: 1;
+}
+
+
+#poweredBy img {
+    max-height: 30px;
+}
+
+.hashtags span {
+	display: none;
+}
+
+.pagination {
+	display: none !important;
+}
